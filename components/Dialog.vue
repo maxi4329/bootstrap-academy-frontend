@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="card flex flex-wrap gap-card justify-end bg-[#1c3250]">
+    <div class="card flex flex-wrap gap-card justify-end bg-[var(--color-quaternary)]">
       <Btn
         v-if="!!secondaryBtn.label"
         :bgColor="theme.bg"

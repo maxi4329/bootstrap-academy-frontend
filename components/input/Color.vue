@@ -11,12 +11,9 @@
 		</article>
 		<input
 			ref="DOM_INPUT"
-			type="range"
-			class="w-full"
-			:min="min"
-			:max="max"
+			type="color"
 			v-model="value"
-			@change="emitRange"
+			@change=""
 		/>
 	</div>
 </template>
@@ -26,12 +23,7 @@ import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   props: {
-    min: { type: Number, default: 1500 },
-    max: { type: Number, default: 9000 },
-    modelValue: { type: Number, default: 4000 },
     label: { type: String, default: '' },
-    prefix: { type: String, default: '' },
-    reduce: { type: Number, default: 10 },
   },
   emits: ['update:modelValue', 'valid'],
   setup(props, { emit }) {
@@ -64,7 +56,7 @@ export default defineComponent({
       percent = percent - props.reduce;
 
       if (!DOM_INPUT.value) return;
-      DOM_INPUT.value.style.background = `linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) ${percent}%, var(--color-white) ${percent}%,  var(--color-white) 100%)`;
+      DOM_INPUT.value.style.background = `linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) ${percent}%, white ${percent}%,  white 100%)`;
     }
 
     function emitRange() {
@@ -84,20 +76,20 @@ export default defineComponent({
 </script>
 
 <style scoped>
+/*
 .width {
 	--margin-left: 1.5rem;
 	width: calc(100% - var(--margin-left));
 }
-input[type='range'] {
+input[type='color'] {
 	border-radius: 8px;
 	height: 7px;
 	outline: none;
 	transition: background 450ms ease-in;
 	-webkit-appearance: none;
 	border: none;
-	background: var(--color-white);
 }
-input[type='range']::-webkit-slider-thumb {
+input[type='color']::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	background-color: var(--color-accent);
 	width: 20px;
@@ -107,8 +99,8 @@ input[type='range']::-webkit-slider-thumb {
 	outline: none;
 	cursor: pointer;
 }
-input[type='range']::-moz-range-thumb {
-  -webkit-appearance: none;
+input[type='color']::-moz-range-thumb {
+	-webkit-appearance: none;
 	background-color: var(--color-accent);
 	width: 20px;
 	height: 20px;
@@ -117,4 +109,5 @@ input[type='range']::-moz-range-thumb {
 	outline: none;
 	cursor: pointer;
 }
+*/
 </style>

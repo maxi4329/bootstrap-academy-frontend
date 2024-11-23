@@ -298,6 +298,10 @@
     "Coachings": "Coachings",
     "Exams": "Prüfungen",
     "Webinars": "Webinare",
+    "Themes": "Themes",
+    "FontSize": "Schriftgröße",
+    "BackgroundColor": "Hintergrundfarbe",
+    "TextColor": "Textfarbe",
     "DisableMFA": "MFA deaktivieren",
     "EnableMFA": "MFA aktivieren",
     "TOTPSecret": "TOTP-Secret",
@@ -510,7 +514,8 @@
     "IncreasedSecurity": "Erhöhte Sicherheit",
     "NoMoreIncreaseSecurity": "Keine erhöhte Sicherheit mehr",
     "ExcitingUpdates": "spannende Neuigkeiten und Updates",
-    "NoMoreExcitingUpdates": "keine spannende Neuigkeiten und Updates mehr"
+    "NoMoreExcitingUpdates": "keine spannende Neuigkeiten und Updates mehr",
+    "AdjustTheDesign": "Passe das Design an"
   },
   "AltAttributes": {
     "BootstrapAcademyLogo": "Bootstrap Academy Logo",
@@ -858,6 +863,7 @@
     "ViewCertificate": "Zertifikat ansehen",
     "Logout": "Ausloggen",
     "DeleteAccount": "Ja, Konto löschen",
+    "OpenThemeSettings": "Theme Einstellungen öffnen",
     "Cancel": "Abbrechen",
     "UploadCertificates": "Zertifikat hochladen",
     "DisableMFA": "MFA Deaktivieren",

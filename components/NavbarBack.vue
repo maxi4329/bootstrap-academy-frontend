@@ -3,6 +3,7 @@
     class="container-fluid bg-secondary flex gap-4 items-center justify-between"
   >
     <Btn tertiary :icon="ArrowLeftIcon" @click="onclickNavigate">
+      <!-- TODO change image to logo_black.png in accessibility theme -->
       <img src="/images/logo.png" class="w-6 h-auto object-contain" :alt="t('AltAttributes.BootstrapAcademyLogo')" />
 
       {{ t(backRoute.label) }}

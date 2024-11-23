@@ -1091,7 +1091,7 @@ table td {
 table,
 th,
 td {
-	border: 1px solid white;
+	border: 1px solid var(--color-white);
 }
 
 td a {

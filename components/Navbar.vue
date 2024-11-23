@@ -3,7 +3,7 @@
     <!-- START -->
     <NuxtLink to="/" class="hidden lg:flex gap-card-sm items-center">
       <img
-        src="/images/logo-text.png"
+        :src="logoSrc"
         :alt="t('AltAttributes.BootstrapAcademyLogo')"
         class="object-contain lg:w-28 xl:w-36 cursor-pointer"
       />
@@ -40,6 +40,13 @@ export default {
   props: {
     links: { default: [] },
     authorized: { type: Boolean, default: false },
+  },
+  computed: {
+    logoSrc() {
+      return document.documentElement.getAttribute('data-theme') === 'accessibility' 
+        ? '/images/logo-black-text.png' 
+        : '/images/logo-text.png';
+    }
   },
   setup() {
     const { t } = useI18n();

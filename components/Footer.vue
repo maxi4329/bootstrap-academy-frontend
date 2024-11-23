@@ -3,7 +3,7 @@
 		class="container-fluid bg-tertiary flex flex-col items-center gap-7 pt-8 relative z-0"
 	>
 		<img
-			src="/images/logo-text.png"
+			:src="logoSrc"
 			:alt="t('AltAttributes.BootstrapAcademyLogo')"
 			class="w-40 mb-5 md:mt-2 block lg:hidden object-contain"
 		/>
@@ -59,6 +59,13 @@ import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
+	computed: {
+    logoSrc() {
+      return document.documentElement.getAttribute('data-theme') === 'accessibility' 
+        ? '/images/logo-black-text.png' 
+        : '/images/logo-text.png';
+    }
+  },
   setup() {
     const { t } = useI18n();
 

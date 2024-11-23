@@ -25,6 +25,7 @@ module.exports = {
       primary: 'var(--color-primary)',
       secondary: 'var(--color-secondary)',
       tertiary: 'var(--color-tertiary)',
+      quaternary: 'var(--color-quaternary)',
       accent: 'var(--color-accent)',
 
       black: 'var(--color-black)',
