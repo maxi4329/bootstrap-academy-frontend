@@ -33,7 +33,6 @@
     </div>
     <div class="md:flex justify-between md:space-x-12 max-md:space-y-6 mb-16">
       <AccountDelete class="md:w-1/2 mx-auto"/>
-      <!-- <AccountDelete class="md:w-1/2"/> -->
     </div>
   </main>
 </template>

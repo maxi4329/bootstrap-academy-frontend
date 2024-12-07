@@ -157,7 +157,6 @@
 /*** iPhone and iOS Form Input Zoom Fixes ***/
 /* Fix Input Zoom on devices older than iPhone 5: */
 @media screen and (device-aspect-ratio: 2/3) {
-
   select,
   textarea,
   input[type="text"],
@@ -177,7 +176,6 @@
 
 /* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
 @media screen and (device-aspect-ratio: 40/71) {
-
   select,
   textarea,
   input[type="text"],
@@ -197,7 +195,6 @@
 
 /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
 @media screen and (device-aspect-ratio: 375/667) {
-
   select,
   textarea,
   input[type="text"],
@@ -218,7 +215,6 @@
 
 /* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
 @media screen and (device-aspect-ratio: 9/16) {
-
   select,
   textarea,
   input[type="text"],
@@ -243,17 +239,18 @@
   }
 }
 
-@media (resolution > 1.5dppx) and (resolution <=2dppx) {
-  html {}
+@media (resolution > 1.5dppx) and (resolution <= 2dppx) {
+  html {
+  }
 }
 
-@media (resolution > 1dppx) and (resolution <=1.5dppx) and (min-height: 550px) {
+@media (resolution > 1dppx) and (resolution <= 1.5dppx) and (min-height: 550px) {
   html {
     font-size: 12px;
   }
 }
 
-@media (resolution <=1dppx) {
+@media (resolution <= 1dppx) {
   body {
     /* @apply bg-warning; */
   }
@@ -264,7 +261,6 @@
   html {
     scroll-behavior: smooth;
   }
-
   body {
     overflow-x: hidden;
     width: 100vw;
@@ -309,7 +305,6 @@
     -webkit-appearance: none;
     margin: 0;
   }
-
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -323,27 +318,22 @@
   *::-webkit-scrollbar {
     width: 5px;
   }
-
   *::-webkit-scrollbar-thumb {
     background: var(--color-transparent);
   }
-
   *:hover::-webkit-scrollbar-thumb {
     background: var(--color-accent);
     opacity: 0.6;
     border-radius: 20px;
   }
-
   body:hover::-webkit-scrollbar-thumb {
     background: var(--color-tertiary);
   }
-
   *:hover {
     -ms-overflow-style: var(--color-accent) !important;
     scrollbar-width: 5px !important;
     scrollbar-color: var(--color-accent);
   }
-
   body:hover {
     -ms-overflow-style: var(--color-tertiary) !important;
     scrollbar-color: var(--color-tertiary);
@@ -354,19 +344,15 @@
   .markdown h1 {
     @apply text-heading-1;
   }
-
   .markdown h2 {
     @apply text-heading-2;
   }
-
   .markdown h3 {
     @apply text-heading-3;
   }
-
   .markdown h4 {
     @apply text-heading-4;
   }
-
   .markdown h5 {
     @apply text-heading-5;
   }
@@ -395,7 +381,7 @@
     @apply py-1 px-2 rounded w-fit bg-[#0d1117] text-white;
   }
 
-  .markdown pre>code {
+  .markdown pre > code {
     @apply py-0 px-0 rounded-none w-fit bg-transparent;
   }
 
@@ -406,11 +392,9 @@
   .form-submitting * {
     @apply opacity-70 pointer-events-none;
   }
-
   .underline-link {
     @apply pb-2 relative cursor-pointer;
   }
-
   .underline-link::after {
     content: "";
     position: absolute;
@@ -420,7 +404,6 @@
     bottom: 0;
     left: 0;
   }
-
   .clamp {
     --n-lines: 1;
     margin: 0;
@@ -429,27 +412,21 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: var(--n-lines);
-    /* number of lines to show */
+    -webkit-line-clamp: var(--n-lines); /* number of lines to show */
     line-clamp: var(--n-lines);
   }
-
   .clamp.line-1 {
     --n-lines: 1;
   }
-
   .clamp.line-2 {
     --n-lines: 2;
   }
-
   .clamp.line-3 {
     --n-lines: 3;
   }
-
   .clamp.line-4 {
     --n-lines: 4;
   }
-
   .h-screen-main {
     --bar-language-height: 28px;
     --bar-navigation-height: 79px;
@@ -457,21 +434,17 @@
     --screen-height: calc(100vh - var(--total));
     height: var(--screen-height);
   }
-
   .h-screen-main.min {
     height: 100%;
     min-height: var(--screen-height);
   }
-
   .h-screen-main.max {
     height: fit-content;
     max-height: var(--screen-height);
   }
-
   .mt-main {
     @apply mt-2 md:mt-4 lg:mt-6 xl:mt-8;
   }
-
   .mb-main {
     @apply mb-6 sm:mb-10 md:mb-12 xl:mb-14;
   }
@@ -483,12 +456,10 @@
     --screen-height: calc(100vh - var(--total));
     height: var(--screen-height);
   }
-
   .h-screen-inner.min {
     height: fit-content;
     min-height: var(--screen-height);
   }
-
   .h-screen-inner.max {
     height: fit-content;
     max-height: var(--screen-height);
@@ -501,25 +472,19 @@
 
   /* Hide scrollbar for IE, Edge and Firefox */
   .hide-scrollbar {
-    -ms-overflow-style: none !important;
-    /* IE and Edge */
-    scrollbar-width: none !important;
-    /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+    scrollbar-width: none !important; /* Firefox */
     overflow: auto !important;
   }
-
   .modal-width-sm {
     @apply w-full sm:w-2/3 md:w-2/4 lg:w-2/6 xl:w-[28%];
   }
-
   .modal-width-md {
     @apply w-[99%] md:w-[60%];
   }
-
   .modal-width-lg {
-    @apply w-[99%] md:w-[90%];
+    @apply w-[99%]  md:w-[90%];
   }
-
   [data-tooltip] {
     --triangle-width: 15px;
     --spacing: 10px;
@@ -553,9 +518,10 @@
 
   [data-tooltip]:hover::after {
     @apply box style-box bg-info text-white font-body absolute text-xs leading-[1.6];
-    content: attr(data-tooltip);
-    /* magic! */
-    left: calc(100% + var(--spacing) + var(--triangle-width) + var(--triangle-width));
+    content: attr(data-tooltip); /* magic! */
+    left: calc(
+      100% + var(--spacing) + var(--triangle-width) + var(--triangle-width)
+    );
     top: -50%;
     z-index: 98;
     width: var(--tooltip-width);
